@@ -131,3 +131,16 @@ body{background:#F5F2EB;color:#17252B;font-family:"Montserrat",Arial,sans-serif}
 .admin-small-btn{background:#F5F2EB;color:#17252B}
 .footer-logo{color:#F5F2EB}.footer-logo strong{color:#C99535}
 @media(max-width:760px){.brand-logo{width:130px;height:58px}.nav{background:#F5F2EB}}
+
+/* AJUSTE FINO — PROPORÇÃO DO LOGOTIPO */
+.header .brand{flex:0 0 auto;min-width:0;width:auto;max-width:150px;overflow:hidden}
+.header .brand-logo{width:124px!important;height:58px!important;max-width:124px!important;max-height:58px!important;object-fit:contain;object-position:left center}
+.footer .brand{flex:0 0 auto;min-width:0;width:auto;max-width:190px}
+.footer .brand-logo{width:170px!important;height:auto!important;max-width:170px!important;max-height:80px!important;object-fit:contain}
+@media(max-width:760px){
+  .header{height:70px;gap:8px}
+  .header .brand{max-width:104px}
+  .header .brand-logo{width:96px!important;height:48px!important;max-width:96px!important;max-height:48px!important}
+  .footer .brand{max-width:150px}
+  .footer .brand-logo{width:140px!important;max-width:140px!important;max-height:66px!important}
+}
