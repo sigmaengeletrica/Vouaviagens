@@ -1,7 +1,7 @@
 (() => {
   const cfg = window.TURISMO_CONFIG || {
     whatsapp: "5554991503391",
-    agencyName: "Turismo a Frente",
+    agencyName: "VOUÁ! Viagens",
     flightsApi: "https://turismo-api-voos.onrender.com"
   };
   const phone = (cfg.whatsapp || "").replace(/\D/g, "");
@@ -144,7 +144,7 @@
       choose.className = "btn green";
       choose.textContent = "Solicitar este voo pelo WhatsApp";
       choose.addEventListener("click", () => {
-        const text = `Olá! Gostaria de uma cotação pela ${cfg.agencyName || "Turismo a Frente"}.\n` +
+        const text = `Olá! Gostaria de uma cotação pela ${cfg.agencyName || "VOUÁ! Viagens"}.\n` +
           `Origem: ${search.origin}\nDestino: ${search.destination}\n` +
           `Tipo: ${search.trip}\n` +
           `Ida: ${formatDate(search.depart)}${search.back ? "\nVolta: " + formatDate(search.back) : ""}\n` +
@@ -251,7 +251,7 @@
       return;
     }
     const s = search;
-    const text = `Olá! Gostaria de uma cotação pela ${cfg.agencyName || "Turismo a Frente"}.\nOrigem: ${s.origin}\nDestino: ${s.destination}\nTipo: ${s.trip}\nIda: ${s.depart}${s.back ? "\nVolta: " + s.back : ""}\nPassageiros: ${s.passengers}\nClasse: ${s.cabin}`;
+    const text = `Olá! Gostaria de uma cotação pela ${cfg.agencyName || "VOUÁ! Viagens"}.\nOrigem: ${s.origin}\nDestino: ${s.destination}\nTipo: ${s.trip}\nIda: ${s.depart}${s.back ? "\nVolta: " + s.back : ""}\nPassageiros: ${s.passengers}\nClasse: ${s.cabin}`;
     if (phone) window.open(wa(text), "_blank", "noopener,noreferrer");
     else alert("Configure o WhatsApp em js/config.js.");
   });
